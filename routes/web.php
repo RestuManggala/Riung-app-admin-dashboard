@@ -29,7 +29,13 @@ use App\Http\Controllers\Dashboard\RekeningKoranController;
 // });
 
 Route::middleware(['isBos'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/akun', [AkunController::class, 'index'])->name('akun');
+    Route::post('/akun/update/{id}', [AkunController::class, 'update'])->name('edit-akun');
+    Route::get('/akun/hapus/{id}', [AkunController::class, 'destroy'])->name('hapus-akun');
+    Route::post('/akun/simpan-akun', [AkunController::class, 'store'])->name('simpan-akun');
+});
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
     // Route::get('/category/{id}', [LaporanController::class, 'show'])->name('show-data');
@@ -49,12 +55,6 @@ Route::middleware(['isBos'])->group(function () {
     Route::get('/rekening-koran/download-rekening/{id}', [RekeningKoranController::class, 'getDownload'])->name('download-rekening');
 
     Route::get('/posisi-saldo', [PosisiSaldoController::class, 'index'])->name('posisi-saldo');
-    
-    Route::get('/akun', [AkunController::class, 'index'])->name('akun');
-    Route::post('/akun/update/{id}', [AkunController::class, 'update'])->name('edit-akun');
-    Route::get('/akun/hapus/{id}', [AkunController::class, 'destroy'])->name('hapus-akun');
-    Route::post('/akun/simpan-akun', [AkunController::class, 'store'])->name('simpan-akun');
-});
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 

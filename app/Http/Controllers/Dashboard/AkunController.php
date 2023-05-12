@@ -40,18 +40,32 @@ class AkunController extends Controller
     {
         Session::flash('name', $request->name);
         Session::flash('email', $request->email);
-        Session::flash('jabatan', $request->jabatan);
+        Session::flash('jabatan_id', $request->jabatan_id);
+        // dd($request->jabatan_id);
         
         $validatedData = $request -> validate([
             'name' => 'required|max:50',
             'email' => 'required|email|unique:users',
             'jabatan_id' => 'required',
             'password' => 'required|min:5|max:20'
-        ]);
+        ],
+        [
+            'name.required' => 'Nama harus diisi',
+            'name.max' => 'Character nama tidak boleh lebih dari 50',
+            'email.required' => 'Email harus diisi',
+            'email.email' => 'Data harus berbentuk email ex. @gmail.com',
+            'email.unique' => 'Email sudah terdaftar',
+            'jabatan_id.required' => 'Jabatan harus dipilih',
+            'password.required' => 'Password harus diisi',
+            'password.min' => 'minimal password harus lebih dari 5',
+            'password.max' => 'maximal password adalah 20 character',
+        ]
+    );
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
-        User::create($validatedData);
+        // User::create($validatedData);
+        DB::table('users')->insert($validatedData);
 
         return redirect('akun')->with('success', 'Registrasi Sukses');
     }

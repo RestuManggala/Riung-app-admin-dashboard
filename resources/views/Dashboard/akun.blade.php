@@ -38,7 +38,7 @@
 
                                     <div class="form-outline mb-2">
                                         <label class="form-label" for="name">Full name</label>
-                                        <input type="text" id="name" name="name" value="{{ Session::get('name') }}" class="form-control form-control-lg" required/>
+                                        <input type="text" id="name" name="name" value="{{ Session::get('name') }}" class="form-control form-control-lg"/>
                                         @error('name')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
@@ -46,7 +46,7 @@
 
                                     <div class="form-outline mb-2">
                                         <label class="form-label">Pilih Jabatan</label>
-                                        <select class="form-select form-control form-control-lg" aria-label="Default select example" name="jabatan_id" value="{{ Session::get('jabatan') }}" required>
+                                        <select class="form-select form-control form-control-lg" aria-label="Default select example" name="jabatan_id" value="{{ Session::get('jabatan') }}">
                                             @foreach ($jabatan as $key)
                                                 <option value="{{ $key->id }}">{{ $key->jabatan }}</option>
                                             @endforeach
@@ -55,7 +55,7 @@
 
                                     <div class="form-outline mb-2">
                                         <label class="form-label" for="email">Email address</label>
-                                        <input type="email" id="email" name="email" value="{{ Session::get('email') }}" class="form-control form-control-lg" required/>
+                                        <input type="text" id="email" name="email" value="{{ Session::get('email') }}" class="form-control form-control-lg"/>
                                         @error('email')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror	
@@ -63,7 +63,7 @@
 
                                     <div class="form-outline mb-2">
                                         <label class="form-label" for="password">Password</label>
-                                        <input type="password" id="password" name="password" class="form-control form-control-lg" required/>
+                                        <input type="password" id="password" name="password" class="form-control form-control-lg"/>
                                         @error('password')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror	

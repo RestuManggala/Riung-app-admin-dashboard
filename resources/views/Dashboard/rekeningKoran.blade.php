@@ -72,7 +72,7 @@
 
                         </div>
                         <div class="card-body">
-                            <table id ="dataTables" class="" style="width: 0px; ">
+                            <table id ="dataTables" >
                                 <thead>
                                     <tr>
                                         <th>Nama Bank</th>

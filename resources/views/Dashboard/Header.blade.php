@@ -56,14 +56,14 @@
                         <span class="description">Posisi Saldo</span>
                     </a>
                 </div>
-                @if (Auth::user()->jabatan_id == 1)
+                
                     <div class="list-item">
                         <a href="{{ route('akun') }}">
                             <img src=" {{ asset('image/Category.svg') }} " alt="" class="icon">
                             <span class="description">Akun</span>
                         </a>
                     </div>
-                @endif
+                
                 <div class="list-item">
                     <a href="{{ route('logout') }}">
                         <img src=" {{ asset('image/Team.svg') }} " alt="" class="icon">
