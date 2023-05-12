@@ -1,0 +1,299 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.already {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.containers {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #111827;
+    width: 300px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in .3s;
+}
+
+.sidebar.hide {
+    width: 87px;
+    transition: all ease-out .3s;
+}
+
+.main {
+    background-color: grey;
+    flex-grow: 1;
+}
+
+.sidebar .description-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.sidebar.hide .description-header {
+    display: none;
+}
+
+.sidebar .header .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    height: 40px;
+}
+
+.sidebar .header .list-item a {
+    text-decoration: none;
+}
+
+.sidebar .header .list-item .icon {
+    margin-right: 12px;
+    width: 25px;
+    height: 25px;
+}
+
+.sidebar .header .illustration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px 0 22px 0; 
+}
+
+.sidebar.hide .header .illustration {
+    display: none;
+}
+
+.sidebar .main-sidebar .list-item .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.sidebar.hide .main-sidebar .list-item .description {
+    display: none;
+}
+
+.sidebar .main-sidebar .list-item .icon {
+    width: 17.92px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.sidebar .main-sidebar .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+}
+
+.sidebar .main-sidebar .list-item a {
+    text-decoration: none;
+}
+
+.sidebar .main-sidebar .list-item:hover {
+    background: #FF9900;
+    transition: all ease-in .2s;
+}
+
+/* Toggle Menu */
+#menu-button {
+    display: flex;
+    align-items: center;
+}
+
+#menu-label {
+    cursor: pointer;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.hamburger {
+    width: 35px;
+    height: 35px;
+    background-image: url("../image/hamburger.png");
+    background-repeat: none;
+    background-size: cover;
+}
+
+
+/* Main Content */
+.main {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main .illus-header {
+    margin: 10px 10px 0 10px;
+    display: flex;
+    width: auto;
+    height: 150px;
+}
+
+.main .main-header {
+    display: flex;
+    margin: 0 10px 0 10px;
+    width: auto;
+    height: 75px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .main-header .tittle {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.main .main-header .path-page {
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.main .main-header .path-page span {
+    color: yellow;
+    
+}
+
+.main .main-content {
+    margin: 0 10px 0 10px;
+    width: 1100px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main .main-content.hide {
+    width: auto;
+}
+
+.menu-input {
+    position: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+}
+
+.menu-input .input-manual {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+}
+
+.menu-input .upload-excel {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+}
+
+.menu-input .input-manual:hover {
+    background-color: #FF9900;
+    border-radius: 10px;
+}
+
+.menu-input .upload-excel:hover {
+    background-color: #FF9900;
+    border-radius: 10px;
+}
+
+.menu-input .input-manual.active {
+    background-color: #FF9900;
+    border-radius: 10px;
+}
+
+.menu-input .upload-excel.active {
+    background-color: #FF9900;
+    border-radius: 10px;
+}
+
+.menu-input a h3 {
+    color: black;
+}
+
+.main-content .form-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.main-content .form-controls .form-grup {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .form-controls .excel {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content .form-controls .form-grup .input-tittle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.main-content .form-controls .form-grup .kolom-input {
+    font-size: 20px;
+}
+
+.main-content .form-controls .btn-submit {
+    background-color: blue;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
